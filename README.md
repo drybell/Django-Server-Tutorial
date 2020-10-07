@@ -362,7 +362,7 @@ If you have any questions or errors, feel free to create an Issue within this re
 
 Here's the deployed website: 
 
-![deployed](deployed.png)
+![deployed](./images/deployed.png)
 
 
 
