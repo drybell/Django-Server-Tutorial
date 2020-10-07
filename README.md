@@ -181,7 +181,7 @@ That's weird, I can't really tell what my Task is since `Todo object (#)` isn't 
 
 Let's check the dashboard now: 
 
-![overloadstr](./images.overloadstr.png)
+![overloadstr](./images/overloadstr.png)
 
 Nice! We can keep on overloading the `__str__` method of django models to help visualize the data within the dashboard. 
 
