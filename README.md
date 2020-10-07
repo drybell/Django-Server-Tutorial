@@ -26,6 +26,8 @@
 
 ## Getting Started
 
+If you ever feel stuck, you can look through the finished tutorial [here](https://github.com/drybell/Django-Server)
+
 ### Initialize the Project
 1. Make a new repository on GitHub and call it *Django-Server* 
 2. Create a local directory, link the fresh repo you just made with `git remote add origin` and run `pipenv shell`
