@@ -281,32 +281,14 @@ Here's a graphic I made to explain in more detail:
 
 	Sample Representation: 
 
-	context  =  [
-					{
-				        "text": "Deploy To Heroku",
-				        "created_at": "2020-10-07T16:05:27.564831Z"
-				    },
-				    .
-				    .
-				    .
-				]
+	context  =  [{"text": "Deploy To Heroku","created_at": "2020-10-07T16:05:27.564831Z"},...]
 
 	render(....., context = {'tasks': context}) 
 			context	==> dict containing 1 key with a value of list of dicts
 
 	Sample Representation: 
 
-	context  =  {
-				   'tasks': [
-								{
-							        "text": "Deploy To Heroku",
-							        "created_at": "2020-10-07T16:05:27.564831Z"
-							    },
-							    .
-							    .
-							    .
-							]
-				}
+	context  =  {'tasks': [{"text": "Deploy To Heroku","created_at": "2020-10-07T16:05:27.564831Z"},...]}
 
 	Now we can access tasks as a template variable within an html template.
 ```
