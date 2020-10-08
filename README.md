@@ -29,8 +29,8 @@
 If you ever feel stuck, you can look through the finished tutorial [here](https://github.com/drybell/Django-Server)
 
 ### Initialize the Project
-1. Make a new repository on GitHub and call it *Django-Server* 
-2. Create a local directory, link the fresh repo you just made with `git remote add origin` and run `pipenv shell`
+1. Make a new repository on GitHub and call it *Django-Server*. We will link our local project files to this repo later. 
+2. Create a local project directory and run `pipenv shell` to initialize a python virtual environment within the workpace. 
 3. Once you see `Successfully created virtual environment!`, you can now run `pipenv install djangorestframework django requests gunicorn` to install the required dependencies for this project.
 4. When the install is complete, you can now run `django-admin startproject mysite`. Choose a different name than `mysite`, I'll be using `preview` as the name of the project. `django-admin` creates the necesary boilerplate files within `preview`. `cd` into the newly generated folder to see its contents: 
 ![preview](./images/preview.png)
@@ -332,7 +332,7 @@ ALLOWED_HOSTS = ['test-django-server1.herokuapp.com']
 
 20. If you have the Heroku CLI installed, within the same directory run `heroku login` and then `heroku create your-app-name`. Please change `your-app-name` to something more suitable, mine will be `test-django-server1`
 
-Within `preview`, run `git init` and `git remote add heroku https://git.heroku.com/your-app-name.git`. Again, change `your-app-name` to your actual app name, the real git link is given to you after running `heroku create`
+Within the outer `preview`, run `git init` and `git remote add heroku https://git.heroku.com/your-app-name.git`. Again, change `your-app-name` to your actual app name, the real git link is given to you after running `heroku create`
 
 21. Run `git add *`, `git commit -m 'initial heroku commit'` and `git push heroku master` to then see if the deployment succeeds. Once you navigate to the site, if any errors persist, run `heroku logs --tail` to see the debug statements. The `logs` command also shows all server requests and responses, useful to see if the site is being visited. 
 
@@ -347,6 +347,35 @@ If you have any questions or errors, feel free to create an Issue within this re
 Here's the deployed website: 
 
 ![deployed](./images/deployed.png)
+
+Here's the final file structure: 
+```
+preview
+├── Procfile
+├── backend
+│   ├── __init__.py
+│   ├── admin.py
+│   ├── apps.py
+│   ├── migrations
+│   │   ├── 0001_initial.py
+│   │   └── __init__.py
+│   ├── models.py
+│   ├── serializers.py
+│   ├── templates
+│   │   └── index.html
+│   ├── tests.py
+│   ├── urls.py
+│   └── views.py
+├── db.sqlite3
+├── manage.py
+├── preview
+│   ├── __init__.py
+│   ├── asgi.py
+│   ├── settings.py
+│   ├── urls.py
+│   └── wsgi.py
+└── requirements.txt
+```
 
 
 
